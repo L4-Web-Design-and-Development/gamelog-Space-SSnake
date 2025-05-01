@@ -25,7 +25,14 @@ export default function Index() {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <h1 className="text-4xl font-bold">Hello, world!</h1>
+      <div>
+        <h1 className="text-4xl font-bold">Hello, world!</h1>
+        {games.map((game) => (
+          <div key={game.id}>
+            <h2>{game.title}</h2>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
