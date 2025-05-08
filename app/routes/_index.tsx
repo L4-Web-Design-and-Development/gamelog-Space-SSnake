@@ -14,7 +14,18 @@ export const meta: MetaFunction = () => {
 export async function loader() {
   const prisma = new PrismaClient();
 
-  const games = await prisma.game.findMany();
+  const games = await prisma.game.findMany({
+    select: {
+      id: true,
+      title: true,
+      releaseDate: true,
+      category: {
+        select: {
+          title: true,
+        },
+      },
+    },
+  });
 
   return json({ games });
 }
@@ -25,16 +36,15 @@ export default function Index() {
   console.log({ games });
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div>
-        {games.map((game) => (
-          <GameCard
-            key={game.id}
-            title={game.title}
-            releaseDate={game.releaseDate}
-          />
-        ))}
-      </div>
+    <div className="container mx-auto grid grid-cols-3 gap-8 p-8">
+      {games.map((game) => (
+        <GameCard
+          key={game.id}
+          title={game.title}
+          releaseDate={game.releaseDate}
+          categoryTitle={game.category?.title || "No Category"}
+        />
+      ))}
     </div>
   );
 }
