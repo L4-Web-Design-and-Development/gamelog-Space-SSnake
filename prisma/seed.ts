@@ -10,6 +10,8 @@ async function seed() {
       price: 59.99,
       rating: 4.9,
       releaseDate: new Date("2017-03-03"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700432/zelda-breath-of-the-wild_xzaa4v.jpg",
     },
     {
       title: "The Witcher 3: Wild Hunt",
@@ -18,6 +20,8 @@ async function seed() {
       price: 39.99,
       rating: 4.8,
       releaseDate: new Date("2015-05-19"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700259/Witcher_kat3qh.png",
     },
     {
       title: "Red Dead Redemption 2",
@@ -25,6 +29,8 @@ async function seed() {
       price: 59.99,
       rating: 4.7,
       releaseDate: new Date("2018-10-26"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700464/Red-Dead-Redemption-2-PC-review-1024x576_vvmr56.jpg",
     },
     {
       title: "God of War",
@@ -32,6 +38,8 @@ async function seed() {
       price: 49.99,
       rating: 4.9,
       releaseDate: new Date("2018-04-20"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700547/reviewgodofwar_zo58ab.webp",
     },
     {
       title: "Minecraft",
@@ -40,6 +48,8 @@ async function seed() {
       price: 26.95,
       rating: 4.8,
       releaseDate: new Date("2011-11-18"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700604/Minecraft_mmulat.jpg",
     },
     {
       title: "Fortnite",
@@ -48,6 +58,8 @@ async function seed() {
       price: 0.0,
       rating: 4.5,
       releaseDate: new Date("2017-07-25"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700635/478a8a58b6abc41b9056582d1ede99d03692d4ae306d8895_gcesii.avif",
     },
     {
       title: "Cyberpunk 2077",
@@ -55,6 +67,8 @@ async function seed() {
       price: 59.99,
       rating: 4.0,
       releaseDate: new Date("2020-12-10"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700661/cyberpunk_or9fh1.webp",
     },
     {
       title: "Among Us",
@@ -63,6 +77,8 @@ async function seed() {
       price: 4.99,
       rating: 4.4,
       releaseDate: new Date("2018-06-15"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700691/amoguslandscape_2560x1440-3fac17e8bb45d81ec9b2c24655758075_wf7eh7.jpg",
     },
     {
       title: "Animal Crossing: New Horizons",
@@ -71,6 +87,8 @@ async function seed() {
       price: 59.99,
       rating: 4.9,
       releaseDate: new Date("2020-03-20"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700717/maxresdefault_mho3kq.jpg",
     },
     {
       title: "Hades",
@@ -79,6 +97,8 @@ async function seed() {
       price: 24.99,
       rating: 4.9,
       releaseDate: new Date("2020-09-17"),
+      imageURL:
+        "https://res.cloudinary.com/duiupjqpp/image/upload/v1746700735/dbc8c55a21688b446a5c57711b726956483a14ef8c5ddb861f897c0595ccb6b5_yiwr71.avif",
     },
   ];
 
@@ -137,7 +157,7 @@ async function seed() {
   }
 
   console.log("🎮 Categories created successfully");
-  
+
   console.log("🔗 Linking each game to a category");
 
   // Fetch games from the database
