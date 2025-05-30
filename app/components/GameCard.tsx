@@ -1,22 +1,25 @@
-import witcherLogo from "~/assets/svg/Witcher.png";
-
 interface GameCardProps {
   title: string;
   releaseDate: string;
-  categoryTitle: string;
+  genre: string;
+  imageUrl: string;
 }
 
 export default function GameCard(props: GameCardProps) {
   const formattedDate = props.releaseDate.slice(0, 10);
   return (
-    <div className="flex flex-col py-10 rounded-lg">
-      <div className="py-10 rounded-full">
-        <img src={witcherLogo} alt="Game Logo"></img>
+    <div className="flex flex-col py-2 rounded-lg m-0">
+      <div>
+        <img
+          src={props.imageUrl}
+          alt="Game Logo"
+          className="w-full h-[250px] object-cover rounded-md pb-4"
+        ></img>
       </div>
       <div className="flex justify-between">
         <div className="flex flex-col gap-4">
           <div className="text-2xl font-bold">{props.title}</div>
-          <div className="text-cyan-300">{props.categoryTitle}</div>
+          <div className="text-cyan-300">{props.genre}</div>
           <div className="text-gray-400">{formattedDate}</div>
         </div>
         <div className="flex flex-col justify-between gap-6 w-90">
